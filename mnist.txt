@@ -5,7 +5,7 @@ from keras.datasets import mnist
 from keras.utils import np_utils
 from keras.optimizers import Adam
 
-# loads the MNIST dataset
+# loads MNIST dataset
 (x_train, y_train), (x_test, y_test)  = mnist.load_data()
 
 # Lets store the number of rows and columns
