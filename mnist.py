@@ -60,7 +60,7 @@ model.compile(loss = 'categorical_crossentropy', optimizer = Adam(), metrics = [
 print(model.summary())
 
 batch_size = 128
-epochs = 3
+epochs = 1
 
 history = model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, validation_data=(x_test, y_test), shuffle=True)
 
