@@ -4,6 +4,7 @@ from keras.layers import Conv2D, MaxPooling2D
 from keras.datasets import mnist
 from keras.utils import np_utils
 from keras.optimizers import Adam
+from contextlib import redirect_stdout
 
 # loads the MNIST dataset
 (x_train, y_train), (x_test, y_test)  = mnist.load_data()
@@ -69,3 +70,6 @@ history = model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, vali
 scores = model.evaluate(x_test, y_test, verbose=1)
 print('Test loss:', scores[0])
 print('Test accuracy:', scores[1])
+with open('accuracy.txt', 'w') as f:
+	with redirect_stdout(f):
+		print(scores[1]*100)
