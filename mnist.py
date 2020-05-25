@@ -76,5 +76,5 @@ print('Test accuracy:', scores[1])
 
 with open('accuracy.txt', 'w') as f:
     with redirect_stdout(f):
-        print(scores[1]*100)
+        print(int(scores[1]*100))
         
