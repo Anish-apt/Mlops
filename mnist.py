@@ -43,20 +43,20 @@ num_classes = y_test.shape[1]
 num_pixels = X_train.shape[1] * X_train.shape[2]
 #model compiling
 model = Sequential()
-i=1
-filters = 2
-for i in range(i):
-    model.add(Convolution2D(filters = filters, kernel_size = (3,3), activation = 'relu'))
-    model.add(MaxPooling2D(pool_size=(2,2)))
-    filters *= 2
+
+model.add(Convolution2D(filters = 5 , kernel_size = (3,3), activation = 'relu'))
+#addConv
+
+model.add(MaxPooling2D(pool_size=(2,2)))
+#addPool
     
 model.add(Flatten())
 
 
 
 model.add(Dense(units = 10 , activation = 'relu'))
-
 #addDense
+
 
 model.add(Dense(units = 10 , activation = 'softmax'))
 
