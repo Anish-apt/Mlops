@@ -54,7 +54,7 @@ model.add(Flatten())
 
 
 
-model.add(Dense(units = 10 , activation = 'relu'))
+model.add(Dense(units = 8 , activation = 'relu'))
 #addDense
 
 
