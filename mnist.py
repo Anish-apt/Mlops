@@ -56,7 +56,7 @@ model.add(Flatten())
 
 model.add(Dense(units = 10 , activation = 'relu'))
 
-
+#addDense
 
 model.add(Dense(units = 10 , activation = 'softmax'))
 
